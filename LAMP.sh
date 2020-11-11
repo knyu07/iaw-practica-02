@@ -27,7 +27,7 @@ apt install php libapache2-mod-php php-mysql -y
 
 # INSTALACIÓN ADMINER
 # Creamos carpeta
-sudo mkdir /etc/ww/html/Adminer
+sudo mkdir /var/www/html/Adminer
 # Nos movemos a esta ruta
 cd /var/www/html/Adminer
 
@@ -66,7 +66,7 @@ HTTPPASSWD_USER=usuario
 HTTPASSWD_PASSWD=contraseña
 HTTPPASSWD_DIR=/home/ubuntu
 
-mkdir -p /var/www/html/start
+mkdir -p /var/www/html/stats
 nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --log-format=COMBINED --real-time-html &
 htpasswd -bc $HTTPPASSWD_DIR/.htpasswd $HTTPPASSWD_USER $HTTPASSWD_PASSWD
 
