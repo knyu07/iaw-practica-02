@@ -74,7 +74,7 @@ htpasswd -bc $HTTPPASSWD_DIR/.htpasswd $HTTPPASSWD_USER $HTTPASSWD_PASSWD
 cd /etc/apache2/sites-available/
 rm -rf 000-default.conf
 cd /home/ubuntu
-cp /home/ubuntu/iaw-practica-03/000-default.conf /etc/apache2/sites-available/
+cp /home/ubuntu/iaw-practica-02/000-default.conf /etc/apache2/sites-available/
 systemctl restart apache2
 
 # --------------------------------------------------------------------------------
