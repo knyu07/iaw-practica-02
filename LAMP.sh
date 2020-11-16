@@ -71,9 +71,7 @@ nohup goaccess /var/log/apache2/access.log -o /var/www/html/stats/index.html --l
 htpasswd -bc $HTTPPASSWD_DIR/.htpasswd $HTTPPASSWD_USER $HTTPASSWD_PASSWD
 
 # Copiamos el archivo de configuración de Apache
-cd /etc/apache2/sites-available/
-rm -rf 000-default.conf
-cd /home/ubuntu
+git clone https://github.com/knyu07/iaw-practica-02
 cp /home/ubuntu/iaw-practica-02/000-default.conf /etc/apache2/sites-available/
 systemctl restart apache2
 
