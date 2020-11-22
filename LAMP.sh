@@ -73,6 +73,7 @@ htpasswd -bc $HTTPPASSWD_DIR/.htpasswd $HTTPPASSWD_USER $HTTPASSWD_PASSWD
 # Copiamos el archivo de configuración de Apache
 git clone https://github.com/knyu07/iaw-practica-02
 cp /home/ubuntu/iaw-practica-02/000-default.conf /etc/apache2/sites-available/
+rm -r /home/ubuntu/iaw-practica-02
 systemctl restart apache2
 
 # --------------------------------------------------------------------------------
